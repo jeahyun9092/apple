@@ -4,14 +4,12 @@
   border-bottom: 1px solid #e5e7eb;
   display: flex;
   justify-content: center;
-  gap: 100px; 
+  gap: 3vw; 
 }
 
 /* 그룹 단위 */
 .filter-group {
   margin-bottom: 20px;
- 
-  
 }
 
 .filter-group1{

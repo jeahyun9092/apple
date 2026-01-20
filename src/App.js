@@ -6,6 +6,8 @@ import RcmdBtn from "./components/recommendButton/RecommendButton.jsx";
 import MenuCard from "./components/recommendCard/MenuCard";
 import DisLike from "./components/dislikedMenuSection/DislikedMenuSection.jsx";
 
+import MENUS from "./data/menus.json";
+
 export default function App() {
   // ------------- [카테고리 및 상황 선택 컴포 관련 코드: 김영웅] -------------
   const foodCategoryList = [
@@ -38,17 +40,6 @@ export default function App() {
     setTempList(foodRequest);
     return foodRequest;
   };
-
-  const menuObjs = [
-    {id: 0, category: "한식",      food: "국밥"},
-    {id: 1, category: "중식",      food: "마라탕"},
-    {id: 2, category: "양식",      food: "파스타"},
-    {id: 3, category: "일식",      food: "초밥"},
-    {id: 4, category: "패스트푸드", food: "치킨"},
-    {id: 5, category: "패스트푸드", food: "피자"},
-    {id: 6, category: "패스트푸드", food: "햄버거"},
-    {id: 7, category: "분식",      food: "라면"},
-  ];
 
   // ------------- [추천결과 카드 컴포넌트 관련 코드] : 김상윤] -------------
   const menus = ["마라탕", "치킨", "피자", "라면", "초밥", "햄버거", "국밥"];
@@ -86,7 +77,7 @@ export default function App() {
         setCategory={setCategory}
         setSituation={setSituation}
       />
-      <RcmdBtn tempList={tempList} handleTempList={handleTempList}/>
+      <RcmdBtn tempList={tempList} handleTempList={handleTempList} MENUS={MENUS}/>
       <MenuCard menus={menus} menu={menu} randomMenu={randomMenu} handleDislike={handleDislike}/>
       <DisLike disFood={disFood} setDisFood={setDisFood}/>
     </div>
