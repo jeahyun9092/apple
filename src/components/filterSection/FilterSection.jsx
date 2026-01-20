@@ -1,4 +1,4 @@
-import "./FliterSection.css";
+import "./FilterSection.css";
 
 export default function FilterSection({ foodCategoryList, situationList, category, situation, setCategory, setSituation }) 
 {
